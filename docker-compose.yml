@@ -1,0 +1,18 @@
+version: '2'
+services:
+    web:
+        build: .
+        ports:
+            - 80:3000
+        volumes:
+            - ./guide:/usr/app
+        command: ["tail","-f", "/dev/null"]
+    database:
+    # Official Postgres image from DockerHub (postgres:13.4-buster is issue of old Docker version - might need to update it localy someday) 
+        image: 'postgres:13.4-buster'
+        ports:
+            - 5432:5432
+        environment:
+            POSTGRES_USER: username # The PostgreSQL user (useful to connect to the database)
+            POSTGRES_PASSWORD: password # The PostgreSQL password (useful to connect to the database)
+            POSTGRES_DB: guide # The PostgreSQL default database (automatically created at first launch)

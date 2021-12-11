@@ -1,0 +1,208 @@
+Cities
+
+const cities: any = [
+  {
+    name_blr: 'Riga',
+    name_ru: 'Riga',
+    name_en: 'Riga',
+    coords: '(56.946, 24.10589)'
+  },
+  {
+    name_blr: 'Tallinn',
+    name_ru: 'Tallinn',
+    name_en: 'Tallinn',
+    coords: '(59.436962, 24.753574)'
+  },
+]
+
+
+const pointTypes = [
+  {
+    name_ru: 'Станции скоростного трамвая',
+    name_en: '',
+    icon: null,
+    sort_order: null,
+  },
+  {
+    name_ru: 'Историко-географические районы города',
+    name_en: '',
+    icon: null,
+    sort_order: null,
+  },
+  {
+    name_ru: 'Железнодорожные вокзалы',
+    name_en: '',
+    icon: null,
+    sort_order: null,
+  },
+  {
+    name_ru: 'Автовокзал',
+    name_en: '',
+    icon: null,
+    sort_order: null,
+  },
+  {
+    name_ru: 'Аеропорт',
+    name_en: '',
+    icon: null,
+    sort_order: null,
+  },
+  {
+    name_ru: 'Общественные туалеты',
+    name_en: '',
+    icon: null,
+    sort_order: null,
+  },
+  {
+    name_ru: 'Городские и районные органы управления',
+    name_en: '',
+    icon: null,
+    sort_order: null,
+  },
+  {
+    name_ru: 'Учреждения культуры',
+    name_en: '',
+    icon: null,
+    sort_order: null,
+  },
+  {
+    name_ru: 'Музеи',
+    name_en: '',
+    icon: null,
+    sort_order: null,
+  },
+  {
+    name_ru: 'Учреждения питания',
+    name_en: '',
+    icon: null,
+    sort_order: null,
+  },
+  {
+    name_ru: 'Торговые магазины, супермаркеты',
+    name_en: '',
+    icon: null,
+    sort_order: null,
+  },
+  {
+    name_ru: 'Места отдыха',
+    name_en: '',
+    icon: null,
+    sort_order: null,
+  },
+  {
+    name_ru: 'Объекты природы',
+    name_en: '',
+    icon: null,
+    sort_order: null,
+  },
+  {
+    name_ru: 'Места для дайвинга',
+    name_en: '',
+    icon: null,
+    sort_order: null,
+  },
+  {
+    name_ru: 'Цирк',
+    name_en: '',
+    icon: null,
+    sort_order: null,
+  },
+  {
+    name_ru: 'Культовые сооружения',
+    name_en: '',
+    icon: null,
+    sort_order: null,
+  },
+  {
+    name_ru: 'Шахты',
+    name_en: '',
+    icon: null,
+    sort_order: null,
+  },
+  {
+    name_ru: 'Заводы',
+    name_en: '',
+    icon: null,
+    sort_order: null,
+  },
+  {
+    name_ru: 'Отвалы',
+    name_en: '',
+    icon: null,
+    sort_order: null,
+  },
+  {
+    name_ru: 'Карьеры и провалы шахт',
+    name_en: '',
+    icon: null,
+    sort_order: null,
+  },
+  {
+    name_ru: 'Отели',
+    name_en: '',
+    icon: null,
+    sort_order: null,
+  },
+  {
+    name_ru: 'Индустриальное наследие',
+    name_en: '',
+    icon: null,
+    sort_order: null,
+  },
+  {
+    name_ru: 'Объекты монументального искусства',
+    name_en: '',
+    icon: null,
+    sort_order: null,
+  },
+  {
+    name_ru: 'Объекты истории и архитектуры',
+    name_en: '',
+    icon: null,
+    sort_order: null,
+  },
+  {
+    name_ru: 'Места обзора панорамы города',
+    name_en: '',
+    icon: null,
+    sort_order: null,
+  },
+]
+
+
+const pointEntities = [
+  {
+    name_blr: 'Деяка точка на мапі',
+    description_blr: 'Деяка точка на мапі приклад щоб було',
+    name_ru: 'Точка на карте',
+    description_ru: 'Какая-то точка на карте пример чтобы было',
+    name_en: 'Some point on the map',
+    description_en: 'Sample point on the map',
+    type: pointType,
+    city: pointCity,
+    coords: '(47.901952, 33.330391)',
+    pics: ['https://i.pinimg.com/474x/56/5a/2d/565a2d81cd7e87268a2446ac72df4325.jpg','https://i.pinimg.com/474x/56/5a/2d/565a2d81cd7e87268a2446ac72df4325.jpg'],
+    videos: ['https://youtu.be/DEqVaPVnQwc,https://youtu.be/DEqVaPVnQwc'],
+    url: 'https://youtu.be/DEqVaPVnQwc',
+    work_hours: '10:00-12:00',
+    email: 'some@email.com',
+    phone: '+38099-999-99-99',
+  },
+  {
+    name_blr: 'Деяка точка на мапі 2',
+    description_blr: 'Деяка точка на мапі приклад щоб було',
+    name_ru: 'Точка на карте',
+    description_ru: 'Какая-то точка на карте пример чтобы было',
+    name_en: 'Some point on the map',
+    description_en: 'Sample point on the map',
+    type: pointType,
+    city: pointCity,
+    coords: '(47.901952, 33.330391)',
+    pics: ['https://i.pinimg.com/474x/56/5a/2d/565a2d81cd7e87268a2446ac72df4325.jpg','https://i.pinimg.com/474x/56/5a/2d/565a2d81cd7e87268a2446ac72df4325.jpg'],
+    videos: ['https://youtu.be/DEqVaPVnQwc,https://youtu.be/DEqVaPVnQwc'],
+    url: 'https://youtu.be/DEqVaPVnQwc',
+    work_hours: '10:00-12:00',
+    email: 'some@email.com',
+    phone: '+38099-999-99-99',
+  },
+]
