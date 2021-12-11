@@ -1,5 +1,10 @@
 # NestJS Kubernetes
 
+## Snippet
+
+export NAME=my-test-nginx
+envsubst < deployment.yaml | kubectl apply -f -
+
 NestJS Kubernetes example
 
 ## Features
