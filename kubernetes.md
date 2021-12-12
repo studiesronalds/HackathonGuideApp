@@ -91,7 +91,12 @@ kubectl apply -f kubernetes/07-data.yaml
 kubectl get -n nestjs-kubernetes-namespace pods
 kubectl describe -n nestjs-kubernetes-namespace pods
 kubectl describe -n nestjs-kubernetes-namespace deployment
+kubectl describe pod 
+```
 
+- Delete everything related
+```sh
+kubectl delete all --all -n nestjs-kubernetes-namespace
 ```
 
 ### Port Forward
