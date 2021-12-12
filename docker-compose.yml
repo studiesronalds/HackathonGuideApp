@@ -17,6 +17,6 @@ services:
             POSTGRES_PASSWORD: password # The PostgreSQL password (useful to connect to the database)
             POSTGRES_DB: guide # The PostgreSQL default database (automatically created at first launch)
         restart: unless-stopped
-            volumes:
+        volumes:
             - ./storage/postgres:/var/lib/postgresql/data
 

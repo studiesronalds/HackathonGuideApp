@@ -5,7 +5,7 @@ const cities: any = [
   {
     name_blr: 'Riga',
     name_ru: 'Riga',
-    name_ru: 'Riga',
+    name_en: 'Riga',
     coords: '(47.900055,33.396661)'
   }
 ]
