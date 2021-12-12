@@ -89,6 +89,9 @@ kubectl apply -f kubernetes/07-data.yaml
 - Get pod status
 ```sh
 kubectl get -n nestjs-kubernetes-namespace pods
+kubectl describe -n nestjs-kubernetes-namespace pods
+kubectl describe -n nestjs-kubernetes-namespace deployment
+
 ```
 
 ### Port Forward
