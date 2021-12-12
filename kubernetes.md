@@ -2,7 +2,7 @@
 
 ## Snippet
 
-
+  kubectl get -n nestjs-kubernetes-namespace pods
 
   PORT 3000
   HOST = "0.0.0.0"
@@ -67,15 +67,29 @@ kubectl apply -f kubernetes/02-volumes.yaml
 - Create nestjs-kubernetes-secrets (Please fill {root}/.env data before that)
 
 ```sh
-env-kubectl-apply.sh kubernetes/03-secrets.yaml
+./env-kubectl-apply.sh kubernetes/03-secrets.yaml
 kubectl get secrets -n nestjs-kubernetes-namespace # to check did it deploy
 ```
 
 - Create nestjs-kubernetes-postgres (Please fill {root}/.env data before that)
 ```sh
-env-kubectl-apply.sh kubernetes/04-postgres.yaml
+./env-kubectl-apply.sh kubernetes/04-postgres.yaml
 ```
 
+- Create nestjs-kubernetes-data
+```sh
+kubectl apply -f kubernetes/07-data.yaml
+```
+
+- Create nestjs-kubernetes-data (Please fill {root}/.env data before that)
+```sh
+./env-kubectl-apply.sh kubernetes/08-nestjs.yaml
+```
+
+- Get pod status
+```sh
+kubectl get -n nestjs-kubernetes-namespace pods
+```
 
 ### Port Forward
 

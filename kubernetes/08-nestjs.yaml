@@ -30,7 +30,7 @@ spec:
         - name: registry-secret
       containers:
         - name: nestjs
-          image: registry.gitlab.com/svtslv/public/dev-nestjs
+          image: ${DOCKER_REPOSITORY_URL}/hackathonguide:v1
           ports:
             - containerPort: 3000
           envFrom:
