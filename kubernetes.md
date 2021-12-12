@@ -2,8 +2,24 @@
 
 ## Snippet
 
-export NAME=my-test-nginx
-envsubst < deployment.yaml | kubectl apply -f -
+
+
+  PORT 3000
+  HOST = "0.0.0.0"
+  NODE_ENV = development
+  APP_NAME = "Guide"
+  APP_VERSION = "1.0"
+  TYPEORM_CONNECTION = postgres
+  TYPEORM_HOST = database
+  TYPEORM_USERNAME = username
+
+  TYPEORM_PORT = 5432
+  TYPEORM_SYNCHRONIZE = true
+  TYPEORM_LOGGING = true
+  TYPEORM_ENTITIES = dist/**/*.entity.*
+  TYPEORM_MIGRATIONS = dist/**/*.migration.*
+  TYPEORM_ENTITIES_DIR = src/db/entity
+  TYPEORM_MIGRATIONS_DIR = src/db/migration
 
 NestJS Kubernetes example
 
@@ -21,11 +37,11 @@ NestJS Kubernetes example
 ## How to use
 
 ```sh
-git clone https://github.com/svtslv/nestjs-kubernetes
+git clone https://github.com/studiesronalds/HackathonGuideApp.git
 ```
 
 ```sh
-cd nestjs-kubernetes
+cd HackathonGuideApp
 ```
 
 ### Create namespace and volume
@@ -48,21 +64,12 @@ kubectl apply -f kubernetes/01-namespaces.yaml
 kubectl apply -f kubernetes/02-volumes.yaml
 ```
 
-### Run on local kubernetes
+- Create nestjs-kubernetes-secrets (Please fill {root}/.env data before that)
 
 ```sh
-skaffold dev --port-forward
+env-kubectl-apply.sh kubernetes/03-secrets.yaml
 ```
 
-### Run on remote kubernetes
-
-- Update `stringData..dockerconfigjson` -> `kubernetes/03-secrets.yaml`
-- Update `...template.containers.image` -> `kubernetes/08-nestjs.yaml`
-- Update `build.artifacts.-image` -> `skaffold.yaml`
-
-```sh
-skaffold dev --port-forward
-```
 
 ### Port Forward
 
