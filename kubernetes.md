@@ -68,6 +68,12 @@ kubectl apply -f kubernetes/02-volumes.yaml
 
 ```sh
 env-kubectl-apply.sh kubernetes/03-secrets.yaml
+kubectl get secrets -n nestjs-kubernetes-namespace # to check did it deploy
+```
+
+- Create nestjs-kubernetes-postgres (Please fill {root}/.env data before that)
+```sh
+env-kubectl-apply.sh kubernetes/04-postgres.yaml
 ```
 
 

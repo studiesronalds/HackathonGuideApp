@@ -32,7 +32,7 @@ spec:
           image: postgres:12-alpine
           env:
             - name: POSTGRES_DB
-              value: nestjs
+              value: $POSTGRES_DATABASE
             - name: POSTGRES_PASSWORD
               valueFrom:
                 secretKeyRef:
