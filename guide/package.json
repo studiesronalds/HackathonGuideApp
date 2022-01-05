@@ -8,7 +8,7 @@
     "prebuild": "rimraf dist",
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
-    "start": "./node_modules/typeorm/cli.js schema:sync && ./node_modules/typeorm/cli.js migration:run && node dist/main",
+    "start": "./node_modules/typeorm/cli.js schema:sync && ./node_modules/typeorm/cli.js migration:run && nest build && node dist/main",
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
