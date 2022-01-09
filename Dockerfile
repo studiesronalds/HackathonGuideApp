@@ -8,4 +8,6 @@ RUN npm i postgres
 
 ADD guide /usr/app
 
+RUN npm install
+
 CMD ["npm", "run", "start"]

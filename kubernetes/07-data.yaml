@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  namespace: nestjs-kubernetes-namespace
+  namespace: guide
   name: data-service
 spec:
   selector:
@@ -14,7 +14,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  namespace: nestjs-kubernetes-namespace
+  namespace: guide
   name: data-deployment
 spec:
   replicas: 1
@@ -27,14 +27,14 @@ spec:
         app: data
     spec:
       volumes:
-        - name: nestjs-kubernetes-volume
+        - name: guide-volume
           persistentVolumeClaim:
-            claimName: nestjs-kubernetes-volume
+            claimName: guide-volume
       containers:
         - name: data
           image: nginx:alpine
           volumeMounts:
-            - name: nestjs-kubernetes-volume
+            - name: guide-volume
               mountPath: /usr/share/nginx/html
               subPath: minio-x.x.x-data/public
           ports:

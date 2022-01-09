@@ -2,7 +2,7 @@
 
 ## Snippet
 
-  kubectl get -n nestjs-kubernetes-namespace pods
+  kubectl get -n guide pods
 
   PORT 3000
   HOST = "0.0.0.0"
@@ -52,7 +52,7 @@ cd HackathonGuideApp
 kubectl apply -f kubernetes/_local-path-provisioner.yaml
 ```
 
-- Create nestjs-kubernetes-namespace
+- Create guide namespace
 
 ```sh
 kubectl apply -f kubernetes/01-namespaces.yaml
@@ -88,15 +88,16 @@ kubectl apply -f kubernetes/07-data.yaml
 
 - Get pod status
 ```sh
-kubectl get -n nestjs-kubernetes-namespace pods
-kubectl describe -n nestjs-kubernetes-namespace pods
-kubectl describe -n nestjs-kubernetes-namespace deployment
+kubectl get -n guide pods
+kubectl describe -n guide pods
+kubectl describe -n guide deployment
+kubectl describe deployment nestjs-deployment -n guide
 kubectl describe pod 
 ```
 
 - Delete everything related
 ```sh
-kubectl delete all --all -n nestjs-kubernetes-namespace
+kubectl delete all --all -n guide
 ```
 
 ### Port Forward
