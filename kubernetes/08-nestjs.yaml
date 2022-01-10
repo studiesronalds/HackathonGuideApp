@@ -11,6 +11,7 @@ spec:
     app: nestjs
 ---
 apiVersion: v1
+kind: Service
 metadata:
   name: external-guide
   namespace: guide
