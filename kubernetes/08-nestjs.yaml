@@ -10,6 +10,18 @@ spec:
   selector:
     app: nestjs
 ---
+apiVersion: v1
+metadata:
+  name: external-guide
+  namespace: guide
+spec:
+  type: ExternalName
+  externalName: guide.local
+  ports:
+  - port: 3000
+  selector:
+    app: nestjs
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
