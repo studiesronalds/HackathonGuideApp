@@ -18,7 +18,7 @@ spec:
   type: ExternalName
   externalName: guide.local
   ports:
-  - port: 3000
+    - port: 3000
   selector:
     app: nestjs
 ---
